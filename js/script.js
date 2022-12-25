@@ -94,7 +94,7 @@ function update () {
 
 function resetAll () {
     previewImg.style.transform = `rotate(0deg) scale(1, 1)`;
-    previewImg.style.filter = `brightness(100%) saturate(100%) invert(0%) grayscale(0%)`;
+    previewImg.style.filter = `contrast(1) brightness(100%) saturate(100%) invert(0%) grayscale(0%) opacity(100%) sepia(0%)`;
 }
 
 function filterShow () {
