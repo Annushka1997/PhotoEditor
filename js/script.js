@@ -79,8 +79,6 @@ function rotateAndFlip () {
                 flipVertical = flipVertical !== 1 ? 1 : -1;
             } else if (btn.classList.contains("horizontal")) {
                 flipHorizontal = flipHorizontal !== 1 ? 1 : -1;
-            } else {
-                cropImage();
             }
             update();
         }); 
