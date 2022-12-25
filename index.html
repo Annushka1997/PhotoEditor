@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Editor</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+   <div class="container">
+        <div class="sidebar">
+            <div class="tabs">
+                <div class="title">
+                    <span class="sign">
+                        Online Photo Editor
+                    </span>
+                </div>
+                <div class="tab-header">
+                    <div class="active">
+                        Editing
+                    </div>
+                    <div>Filters</div>
+                    <div> Import and Export </div>
+                </div>
+                <div class="tab-indicator">
+                    <div>  </div>
+                </div>
+                <div class="tab-body">
+                    <div class="active">
+                        <div class="rotate">
+                            <button class="rotateBtn left" id="left"><i class="fa-solid fa-rotate-left"></i></button>
+                            <button class="rotateBtn right" id="right"><i class="fa-solid fa-rotate-right"></i></button>
+                            <button class="rotateBtn horizontal" id="horizontal"><i class='bx bx-reflect-vertical'></i></button>
+                            <button class="rotateBtn vertical" id="vertical"><i class='bx bx-reflect-horizontal' ></i></button>
+                        </div>                        
+                    </div>
+                    <div>
+                        <div class="filter">
+                            <div class="options">
+                            <button id="contrast" class="contrast filterBtn">Contrast</button>
+                            <button id="saturation" class="saturation filterBtn">Saturation</button>
+                            <button id="brightness" class="brightness activeFilter filterBtn">Brightness</button>
+                            <button id="inversion" class="inversion filterBtn">Inversion</button>
+                            <button id="grayscale" class="grayscale filterBtn">Grayscale</button>
+                            <button id="opacity" class="opacity filterBtn">Opacity</button>
+                            <button id="sepia" class="sepia filterBtn">Sepia</button>
+                        </div>
+                        <div class="slider">
+                            <div class="filter-info">
+                                <p class="name" id="filterType">Saturation</p>
+                                <p class="value" id="filterValue">100%</p>
+                            </div>
+                            <input type="range" value="100" min="0" max="200" id="filterInput">
+                        </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="row">
+                            <input type="file" class="file-input" accept="image/*" hidden>
+                            <button class="choose-img" id="chooseImg"><i class="fa fa-picture-o"></i></button>
+                            <button class="save-img" id="saveImg"><i class='fas fa-download'></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mainbar">
+            <div id="editor">
+                <div class="preview-img">
+                    <img src="./img/colour_icon.png" alt="">
+            </div>
+            </div>
+            
+            <button class="reset-filter" id="resetBtn">Reset Filters</button>
+        </div>
+   </div>
+   <script src="./js/script.js"></script>
+</body>
+</html>
